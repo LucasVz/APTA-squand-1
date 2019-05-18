@@ -2,11 +2,14 @@ from django import forms
 #from .models import Post
 
 class ContactHelp(forms.Form):
-    name = forms.CharField(label='Nome', max_length=100)
-    telefone = forms.CharField(label='telefone', max_length=12)
-    email = forms.EmailField(label='E-mail')
-    message = forms.CharField(label='Duvida/Mensagem', widget=forms.Textarea)
+    nome = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu nome', 'data-rule':'minlen:4', 'data-msg': 'Por favor, insira pelo menos 4 caracteres.'}))
+    telefone = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '(xx)xxxx-xxxxx', 'data-rule':'minlen:4', 'data-msg': 'Por favor, insira pelo menos 9 caracteres.'}), max_length=12)
+    email = forms.EmailField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'exemplo@exemplo.com', 'data-rule':'minlen:4'}))
+    message = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Duvida/Mensagem', 'data-rule':'minlen:4'}))
 
     #class Meta:
     #    model = Post
     #    fields = ('title', 'text',)
+
+
+
