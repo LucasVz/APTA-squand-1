@@ -39,18 +39,18 @@
         <img src="{% static 'img/Logo.png' %}" class="logo">
         <ul>
           <li><a href="">Blog</a></li>
-          <li><a href="">Contatos</a></li>
+          <li><a href="#contatos">Contatos</a></li>
           <li><a href="">Clientes</a></li>
           <li><a href="">Portifólio</a></li>
           <li><a href="">Serviços</a></li>
-          <li><a href="">Quem somos</a></li>
-          <li><a href="">Início</a></li>
+          <li><a href="#quemsomos">Quem somos</a></li>
+          <li><a href="#start">Início</a></li>
         </ul>
       </nav>
     </div>
   </header> 
   <!-- fim da navbar -->
-  <div class="Inicio" > 
+  <div class="Inicio" id="start"> 
       <div class="container-fluid ">
         <div class= "row ">
           <div class= "col-sm-6 ">
@@ -67,7 +67,7 @@
   </div>
 
 
-  <div class="Quem-somos" >
+  <div class="Quem-somos" id="quemsomos">
     <div class="container-fluid">
       <div class= "row">
         <div class= "col-sm-5">
@@ -115,7 +115,7 @@
           </div>
   </div>
 
-  <div class="contatos">
+  <div class="contatos" id="contatos">
     <div class="container-fluid ">
       <div class= "row ">
         <div class= "col-sm-12 ">
@@ -142,22 +142,26 @@
         </div>
 
         <div class= "col-sm-6" >
-          <div class= "formulario">
-            <h1>MANDE-NOS UMA MENSAGEM</h1>
-            <form>
-            {% csrf_token %}
-            {% for field in form %}
-              <div class="form-group">
-                <label for="exampleFormControlInput1">{{ field.label }}</label>
-            {{ field }}
-              </div>
-            {% endfor %}
-            </form>
-          </div>
-
-          <div class= "enviar">
-            <button type="submit" class="btn btn-primary btn-lg">ENVIAR</button>
-          </div>
+            <div class= "formulario">
+                <h1>MANDE-NOS UMA MENSAGEM</h1>
+                <form action="#contatos" method="post">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {% for field in form %} 
+                <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+                {{ field.errors }}
+                </div>
+                {% endfor %}
+                <div class= "enviar">
+                <button type="submit" class="btn btn-primary btn-lg">ENVIAR</button>
+                </div>
+                {% if is_valid %}
+                <h1>E-MAIL ENVIADO COM SUCESSO</h1>
+                {% endif %}
+                </form>
+            </div>
         </div>
         <div class= "col-sm-12 social-icon">
           <a href="https://www.facebook.com/aptaconsultoriajr/"><img src="{% static 'img/faceicone.png' %}"  height="80"></a>
