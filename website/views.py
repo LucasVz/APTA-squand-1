@@ -17,7 +17,7 @@ def website(request):
         form = ContactHelp(request.POST)
         if form.is_valid():
             context_dict['is_valid'] = True
-            #form.send_mail()
+            form.send_mail()
             form = ContactHelp()
     else:
         form = ContactHelp()

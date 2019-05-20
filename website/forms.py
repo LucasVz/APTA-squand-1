@@ -1,8 +1,21 @@
 from django import forms
-#from .models import Post
+from django.core.mail import send_mail
+from django.conf import settings
 
 class ContactHelp(forms.Form):
-    nome = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu nome', 'data-rule':'minlen:4', 'data-msg': 'Por favor, insira pelo menos 3 caracteres.'}))
+    name = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu nome', 'data-rule':'minlen:4', 'data-msg': 'Por favor, insira pelo menos 3 caracteres.'}))
     telefone = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '(xx)xxxxxxxxx', 'data-rule':'minlen:4', 'data-msg': 'Por favor, insira pelo menos 9 caracteres.'}), max_length=11)
     email = forms.EmailField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'exemplo@exemplo.com', 'data-rule':'minlen:4'}), label='E-mail')
-    mensagem = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Duvida/Mensagem', 'data-rule':'minlen:4'}))
+    message = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Duvida/Mensagem', 'data-rule':'minlen:4'}))
+
+    def send_mail(self):
+        subject = self.cleaned_data['name']
+        message = 'Nome: %(name)s; E-mail: %(email)s;%(message)s'
+        context = {
+            'name': self.cleaned_data['name'],
+            'email': self.cleaned_data['email'],
+            'message': self.cleaned_data['message']
+        }
+
+        message = message % context
+        send_mail(subject, message, settings.DEFAULT_FROM_EMAIL,[settings.CONTACT_EMAIL])

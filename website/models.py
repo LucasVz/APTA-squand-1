@@ -17,7 +17,7 @@ class Clientes(models.Model):
 class QuemSomos(models.Model):
     titulo = models.CharField(max_length=100, null=True, blank=True)
     imagem = models.ImageField(upload_to='quemsomos/', null=True, blank=True)
-    texto = models.TextField(max_length=2000, null=True)
+    texto = models.TextField(max_length=20000, null=True)
 
     def __str__(self):
         return self.titulo
@@ -28,22 +28,30 @@ class QuemSomos(models.Model):
         ordering = ['titulo']
 
 class Servicos(models.Model):
-    titulo = models.CharField(max_length=100, null=True)
-    breveinfo = models.CharField(max_length=200)
-    info = models.CharField(max_length=2000)
+    titulo1 = models.CharField(max_length=100, null=True)
+    breveinfo1 = models.CharField(max_length=2000, null=True)
+    info1 = models.CharField(max_length=2000, null=True)
 
-    def __str__(self):
-        return self.titulo
+    titulo2 = models.CharField(max_length=100, null=True)
+    breveinfo2 = models.TextField(max_length=2000, null=True)
+    info2 = models.TextField(max_length=2000, null=True)
+  
+    titulo3 = models.CharField(max_length=100, null=True)
+    breveinfo3 = models.TextField(max_length=2000, null=True)
+    info3 = models.TextField(max_length=2000, null=True)
+
+    titulo4 = models.CharField(max_length=100, null=True)
+    breveinfo4 = models.TextField(max_length=2000, null=True)
+    info4 = models.TextField(max_length=2000, null=True)
 
     class Meta:
         verbose_name='Descricao'
         verbose_name_plural='Servicos'
-        ordering = ['titulo']
 
 class Portfolio(models.Model):
     titulo = models.CharField(max_length=100, null=True)
     image = models.ImageField(upload_to='midia/portfolio', null=True, blank=True)
-    imgdesc = models.CharField(max_length=200)
+    imgdesc = models.CharField(max_length=2000)
 
     def __str__(self):
         return self.titulo
