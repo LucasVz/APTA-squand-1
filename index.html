@@ -17,6 +17,7 @@
 
 <script type="text/javascript" src="slick/slick.min.js"></script>
 
+
 </head>
 <body>
   <!--  Navbar -->
@@ -25,13 +26,13 @@
       <nav class= "navbar">
         <img src="imagens/Logo.png" class="logo">
         <ul>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Contatos</a></li>
-          <li><a href="">Clientes</a></li>
-          <li><a href="">Portifólio</a></li>
-          <li><a href="">Serviços</a></li>
-          <li><a href="">Quem somos</a></li>
-          <li><a href="">Início</a></li>
+          <li><a href="#Blog">Blog</a></li>
+          <li><a href="#Contatos">Contatos</a></li>
+          <li><a href="#Clientes">Clientes</a></li>
+          <li><a href="#Portifolio">Portifólio</a></li>
+          <li><a href="#Serviços">Serviços</a></li>
+          <li><a href="#Quem-somos">Quem somos</a></li>
+          <li><a href="#Inicio">Início</a></li>
         </ul>
       </nav>
     </div>
@@ -39,7 +40,7 @@
   <!-- Fim da Navbar -->
 
   <!-- Inicio -->
-  <div class="Inicio" > 
+  <div class="Inicio" id="Inicio" > 
     <div class="container-fluid ">
       <div class= "row ">
         <div class= "col-sm-6 ">
@@ -54,7 +55,7 @@
   <!-- fim Inico -->
 
   <!-- Quem Somos -->
-  <div class="Quem-somos">
+  <div class="Quem-somos" id="Quem-somos">
     <div class="container-fluid">
       <div class= "row">
         <div class= "col-sm-5">
@@ -72,7 +73,7 @@
   <!-- Fim Quem Somos -->
 
   <!-- Serviços -->
-  <div class="serviços" >
+  <div class="serviços" id="Serviços" >
     <div class="container-fluid ">
       <div class= "row ">
         <div class= "col-sm-12 ">
@@ -168,65 +169,61 @@
   <!-- Fim Perguntas -->
 
   <!-- Potifólio -->
-  <div class="portifolio">
-    <h1>PORTFÓLIO</h1>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="portifolio-1">
-            <div class="center" id="animated-1">
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 1.jpg"></span></div>
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 2.jpg"></span></div>
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 3.jpg"></span></div>
-            </div>
+  <div class="portfolio" id="Portfolio">
+    <h1>Portfolio</h1>
+    <div class="container-fluid">
+      <div class="carrossel">
+
+        <div class="port">
+          <img src="imagens/Port 1.jpg">
+          <div class="overlay">
+            <p >Donec ut mollis felis, a lobortis dolor. Aenean suscipit, nisl vitae auctor bibendum, tellus mi gravida dui, sit amet aliquam dui erat et mi. Etiam id odio tincidunt, interdum enim eu, vulputate est. Morbi efficitur urna mi, eget fermentum leo interdum in. Integer vel lorem rhoncus, feugiat dolor nec, rhoncus erat. Aliquam erat volutpat</p>
           </div>
         </div>
 
-
-        <div class="col-sm-6">
-          <div class="portifolio-2">
-            <br>
-            <div class="center" id="animated-1">
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 1.jpg"></span></div>
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 2.jpg"></span></div>
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 3.jpg"></span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="portifolio-3">
-            <div class="center" id="animated-1">
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 1.jpg"></span></div>
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 2.jpg"></span></div>
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 3.jpg"></span></div>
-            </div>
+        <div class="port">
+          <img src="imagens/Port 2.jpg">
+          <div class="overlay">
+            <p >Donec ut mollis felis, a lobortis dolor. Aenean suscipit, nisl vitae auctor bibendum, tellus mi gravida dui, sit amet aliquam dui erat et mi. Etiam id odio tincidunt, interdum enim eu, vulputate est. Morbi efficitur urna mi, eget fermentum leo interdum in. Integer vel lorem rhoncus, feugiat dolor nec, rhoncus erat. Aliquam erat volutpat</p>
           </div>
         </div>
 
+        <div class="port">
+          <img src="imagens/Port 3.jpg">
+          <div class="overlay">
+            <p >Donec ut mollis felis, a lobortis dolor. Aenean suscipit, nisl vitae auctor bibendum, tellus mi gravida dui, sit amet aliquam dui erat et mi. Etiam id odio tincidunt, interdum enim eu, vulputate est. Morbi efficitur urna mi, eget fermentum leo interdum in. Integer vel lorem rhoncus, feugiat dolor nec, rhoncus erat. Aliquam erat volutpat</p>
+          </div>
+        </div>
 
-        <div class="col-sm-6">
-          <div class="portifolio-4">
-            <br>
-            <div class="center" id="animated-1">
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 1.jpg"></span></div>
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 2.jpg"></span></div>
-              <div class="slick-dupe"><span class="hero__title-misc  |  animate"><img src="imagens/Port 3.jpg"></span></div>
-            </div>
+        <div class="port">
+          <img src="imagens/Port 2.jpg">
+          <div class="overlay">
+            <p >Donec ut mollis felis, a lobortis dolor. Aenean suscipit, nisl vitae auctor bibendum, tellus mi gravida dui, sit amet aliquam dui erat et mi. Etiam id odio tincidunt, interdum enim eu, vulputate est. Morbi efficitur urna mi, eget fermentum leo interdum in. Integer vel lorem rhoncus, feugiat dolor nec, rhoncus erat. Aliquam erat volutpat</p>
+          </div>
+        </div>
+
+        <div class="port">
+          <img src="imagens/Port 1.jpg">
+          <div class="overlay">
+            <p >Donec ut mollis felis, a lobortis dolor. Aenean suscipit, nisl vitae auctor bibendum, tellus mi gravida dui, sit amet aliquam dui erat et mi. Etiam id odio tincidunt, interdum enim eu, vulputate est. Morbi efficitur urna mi, eget fermentum leo interdum in. Integer vel lorem rhoncus, feugiat dolor nec, rhoncus erat. Aliquam erat volutpat</p>
+          </div>
+        </div>
+
+        <div class="port">
+          <img src="imagens/Port 3.jpg">
+          <div class="overlay">
+            <p >Donec ut mollis felis, a lobortis dolor. Aenean suscipit, nisl vitae auctor bibendum, tellus mi gravida dui, sit amet aliquam dui erat et mi. Etiam id odio tincidunt, interdum enim eu, vulputate est. Morbi efficitur urna mi, eget fermentum leo interdum in. Integer vel lorem rhoncus, feugiat dolor nec, rhoncus erat. Aliquam erat volutpat</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Fim Potifólio -->
+
+  <!-- Fim Portfólio -->
 
   <!-- Clientes -->
-  <div class="Clientes">
+  <div class="Clientes" id="Clientes">
     <h1>CLIENTES</h1>
     <br>
       <div class= "slick">
@@ -241,7 +238,7 @@
   <!-- Fim Clientes -->
 
   <!-- Contatos -->
-  <div class="contatos">
+  <div class="contatos" id="Contatos">
     <div class="container-fluid ">
       <div class= "row ">
         <div class= "col-sm-12 ">

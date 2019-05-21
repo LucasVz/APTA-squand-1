@@ -25,7 +25,7 @@ function fechar(){
 	if(getElementById = 'popup-4')
 		document.getElementById('popup-4').style.display =  'none';
 }
-/* Clientes */
+// Clientes
 $(document).ready(function(){
     $('.slick').slick({
       slidesToShow: 5,
@@ -35,31 +35,41 @@ $(document).ready(function(){
     });
   });
 
-/*Portifólio */
-$('.center').slick({
-  centerMode: true,
-  vertical:true,
-  centerPadding: '0px',
-  slidesToShow: 1,
+
+// Portfolio
+$('.carrossel').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3 ,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 1024,
       settings: {
-        arrows: false,
-        centerMode: false,
-        centerPadding: '40px',
-        slidesToShow: 1
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     },
     {
       breakpoint: 480,
       settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
   ]
 });
 	
