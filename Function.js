@@ -25,7 +25,7 @@ function fechar(){
 	if(getElementById = 'popup-4')
 		document.getElementById('popup-4').style.display =  'none';
 }
-
+/* Clientes */
 $(document).ready(function(){
     $('.slick').slick({
       slidesToShow: 5,
@@ -34,3 +34,35 @@ $(document).ready(function(){
       autoplaySpeed: 1000,
     });
   });
+
+/*Portifólio */
+$('.center').slick({
+  centerMode: true,
+  vertical:true,
+  centerPadding: '0px',
+  slidesToShow: 1,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+	
+
+
+
