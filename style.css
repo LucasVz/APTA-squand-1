@@ -2,14 +2,7 @@ body {
 	list-style: none;
 
 }
-
 /* navbar */
-header::after {
-	content: '';
-	display: table;
-	clear: both;
-}
-
 header{
 	background-color: rgba(2, 78, 80, 0.5);
 	opacity: .8;
@@ -22,7 +15,6 @@ header{
 .navbar ul {
 	margin: 0px;
 	padding: 0px;
-
 }
 
 .navbar li{
@@ -46,7 +38,6 @@ header{
 	margin: auto;
 	float: left;
 	margin-left: 40px;
-
 }
 /* Fim navbar */
 
@@ -194,7 +185,7 @@ header{
 .Clientes{
 	background: #EFF4F5;
 	padding-top: 3%;
-	padding-bottom: 5%;
+	padding-bottom: 1%;
 }
 
 .Clientes h1{
@@ -209,8 +200,8 @@ header{
 
 .slick{
 	width: 80%;
-	height: 20%;
-	max-height: 210px;
+	height: 80%;
+	max-height: 180px;
 	margin-left: 10%;
 }
 
@@ -357,6 +348,7 @@ iframe{
 	list-style: none;
 	background: #D9E4E5;
 }
+
 .text-serviços h1{
 	list-style: none;
 	text-align: center;	
@@ -421,6 +413,7 @@ iframe{
 	padding-left: 40%;
 	position: relative;
 }
+
 .saiba-m .btn-lg{
 	width: 80%;
 	font-family: Karla;
@@ -430,6 +423,7 @@ iframe{
 	line-height: 29px;
 	color: #FFFFFF;
 }
+
 .saiba-m{
 	padding-left: 22%;
 	padding-top: 10%;
@@ -445,8 +439,8 @@ iframe{
 }
 
 .popup-1{
-	position: absolute;
-	top: 270%;
+	position: fixed;
+	top: 0;
 	bottom: 0;
 	left: 9%;
 	margin:auto;
@@ -456,6 +450,7 @@ iframe{
 	display: none;
 	padding-left: 2%;
 	padding-top: 2%;
+	max-height: 600px;
 }
 
 .popup-1 ul{
@@ -475,8 +470,8 @@ iframe{
 }
 
 .popup-2{
-	position:absolute;
-	top: 440%;
+	position:fixed;
+	top: 0;
 	bottom: 0;
 	left: 9%;
 	margin:auto;
@@ -486,6 +481,7 @@ iframe{
 	display: none;
 	padding-left: 2%;
 	padding-top: 2%;
+	max-height: 600px;
 }
 
 .popup-2 ul{
@@ -503,9 +499,10 @@ iframe{
 	padding-top: 10%;
 	padding-bottom: 10%;
 }
+
 .popup-3{
-	position: absolute;
-	top: 270%;
+	position: fixed;
+	top: 0;
 	bottom: 0;
 	left: 54%;
 	margin:auto;
@@ -515,6 +512,7 @@ iframe{
 	display: none;
 	padding-left: 2%;
 	padding-top: 2%;
+	max-height: 600px;
 }
 
 .popup-3 ul{
@@ -533,8 +531,8 @@ iframe{
 	padding-bottom: 10%;
 }
 .popup-4{
-	position: absolute;
-	top: 440%;
+	position: fixed;
+	top: 0;
 	bottom: 0;
 	left: 54%;
 	margin:auto;
@@ -544,6 +542,7 @@ iframe{
 	display: none;
 	padding-left: 2%;
 	padding-top: 2%;
+	max-height: 600px;
 }
 
 .popup-4 ul{
@@ -585,7 +584,7 @@ iframe{
 .carrossel{
 	height: 45%;
 	width:auto;
-	max-height: 350px;
+	max-height: 320px;
 }
 
 .portfolio .container-fluid{
@@ -638,26 +637,17 @@ iframe{
   content: "<";
   color:#FF9933;
   font-size: 40px;
+  font-family: Karla;
+  font-weight: bold;
 }
 
 .carrossel .slick-next:before {
   content: ">";
   color:#FF9933;
   font-size: 40px;
+  font-family: Karla;
+  font-weight: bold;
 }
 
-@media only screen and (max-width: 600px) {
-  .popup-1 {
-    position: absolute;
-	top: 270%;
-	bottom: 0;
-	left: 9%;
-	margin:auto;
-	width: 40%;
-	height: 80%;
-	background: #373737;
-	display: none;
-	padding-left: 2%;
-	padding-top: 2%;
-  }
-}
+
+

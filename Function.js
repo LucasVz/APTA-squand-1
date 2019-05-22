@@ -1,3 +1,4 @@
+//Popup
 function abrir1(){
 	document.getElementById('popup-1').style.display = 'block';
 }
@@ -25,6 +26,8 @@ function fechar(){
 	if(getElementById = 'popup-4')
 		document.getElementById('popup-4').style.display =  'none';
 }
+
+
 // Clientes
 $(document).ready(function(){
     $('.slick').slick({
@@ -67,9 +70,6 @@ $('.carrossel').slick({
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
 	
