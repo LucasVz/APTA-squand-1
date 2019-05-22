@@ -46,9 +46,7 @@
         <div class= "row ">
           <div class= "col-sm-6 ">
             <ul class="text-Inicio">
-              <li>
                 <p>Soluções em Recursos Humano e Gestão de pessoas através do olhar da psicologia organizacional</p>
-              </li>
               <button type="button" class="btn btn-primary btn-lg">SOLICITE UM DIAGNÓSTICO GRATUITO AQUI</button>
             </ul>
             <div class="mascara">
@@ -66,10 +64,8 @@
       <div class= "row">
         <div class= "col-sm-5">
           <ul class="text-qs">
-            <li>
             <h1>Quem Somos?</h1>
             <p>{{ data.texto }}</p>
-          </li>
           </ul>
         </div>
          <div class= "col-sm-6">
@@ -170,9 +166,9 @@
         <div class= "col-sm-12 ">
           <ul class="text-perguntas">
             <h2>Perguntas básicas que irão te mostrar que a sua empresa necessita de uma pesquisa de clima organizacional</h2>
-            <li>Sente que seus funcionários cairam na rotina e por isso fazem um trabalho monótono?</li>
-            <li>Sente que seus funcionários estão insatisfeitos com suas devidas tarefas?</li>
-            <li>Seus funcionários buscam aprimorar suas técnicas de trabalho, para torná-la mais ágio, satisfatório e com mais qualidade?</li>
+            <p>Sente que seus funcionários cairam na rotina e por isso fazem um trabalho monótono?</p>
+            <p>Sente que seus funcionários estão insatisfeitos com suas devidas tarefas?</p>
+            <p>Seus funcionários buscam aprimorar suas técnicas de trabalho, para torná-la mais ágio, satisfatório e com mais qualidade?</p>
           </ul>
         </div>
       </div>
@@ -187,7 +183,7 @@
       <div class="carrossel">
         {% for Portfolio in stuff %}
         <div class="port">
-          <img width="240" height="240" src="{{ Portfolio.image.url }}">
+          <img src="{{ Portfolio.image.url }}">
           <div class="overlay">
             <p>{{ Portfolio.imgdesc }}</p>
           </div>
@@ -225,7 +221,7 @@
           <br><br>
 
           <div >
-            <img src="{% static 'img/Localizaçãoicone.png' %}" class= "icon-1" >
+            <img src="{% static 'img/Localização icone.png' %}" class= "icon-1" >
             <li>Campus Universitário Central UFRN</li>
             <li>Setor de Aulas II</li>
             <li>Sala F5</li>
@@ -234,7 +230,7 @@
           </div>
 
           <div >
-            <img src="{% static 'img/emailicone.png' %}" class= "icon-2">
+            <img src="{% static 'img/email icone.png' %}" class= "icon-2">
             <br>
             <li>aptaconsultoriajr@gmail.com</li>
           </div>
@@ -243,9 +239,13 @@
         <div class= "col-sm-6" >
             <div class= "formulario">
                 <h1>MANDE-NOS UMA MENSAGEM</h1>
-                <form method="post">
+                <form action="#Contatos" method="post">
+                  {% if is_valid %}
+                      <h1>Sua mensagem foi enviada com sucesso</h1>
+                      {% else %}
+                      <h1>Lembrete: todos os campos são necessários</h1>
+                  {% endif %}
                 {% csrf_token %}
-                {{ form.non_field_errors }}
                 {% for field in form %}
                 <div class="form-group">
                 {{ field.label_tag }}
@@ -256,16 +256,13 @@
                 <div class= "enviar">
                 <button type="submit" class="btn btn-primary btn-lg">ENVIAR</button>
                 </div>
-                {% if is_valid %}
-                <h1>E-MAIL ENVIADO COM SUCESSO</h1>
-                {% endif %}
                 </form>
             </div>
         </div>
         <div class= "col-sm-12 social-icon">
-          <a href="https://www.facebook.com/aptaconsultoriajr/"><img src="{% static 'img/faceicone.png' %}"  height="80"></a>
-          <a href="https://www.instagram.com/aptaconsultoria/"><img src="{% static 'img/instaicone.png' %}"  height="95"></a>
-          <a href="https://aptaconsultoriajr.wixsite.com/site/sobre"><img src="{% static 'img/blogicone.png' %}"  height="110"></a>
+          <a href="https://www.facebook.com/aptaconsultoriajr/"><img src="{% static 'img/face icone.png' %}"  height="80"></a>
+          <a href="https://www.instagram.com/aptaconsultoria/"><img src="{% static 'img/insta icone.png' %}"  height="95"></a>
+          <a href="https://aptaconsultoriajr.wixsite.com/site/sobre"><img src="{% static 'img/blog icone.png' %}"  height="110"></a>
         </div>
       </div>
     </div>

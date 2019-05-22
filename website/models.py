@@ -3,7 +3,7 @@ from django.db import models
 
 class Clientes(models.Model):
     titulo = models.CharField(max_length=100, null=True, blank=True)
-    logo = models.ImageField(upload_to='media/clientes', null=True, blank=True)
+    logo = models.ImageField(upload_to='clientes/', null=True, blank=True)
     link = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
@@ -16,7 +16,7 @@ class Clientes(models.Model):
 
 class QuemSomos(models.Model):
     titulo = models.CharField(max_length=100, null=True, blank=True)
-    imagem = models.ImageField(upload_to='media/quemsomos', null=True, blank=True)
+    imagem = models.ImageField(upload_to='quemsomos/', null=True, blank=True)
     texto = models.TextField(max_length=20000, null=True)
 
     def __str__(self):
@@ -29,7 +29,7 @@ class QuemSomos(models.Model):
 
 class Servicos(models.Model):
     titulo = models.CharField(max_length=100, null=True)
-    imagem = models.ImageField(upload_to='media/portfolio', null=True, blank=True)
+    imagem = models.ImageField(upload_to='servicos/', null=True, blank=True)
     breveinfo = models.CharField(max_length=2000, null=True)
     info = models.CharField(max_length=2000, null=True)
 
@@ -43,7 +43,7 @@ class Servicos(models.Model):
 
 class Portfolio(models.Model):
     titulo = models.CharField(max_length=100, null=True)
-    image = models.ImageField(upload_to='media/portfolio', null=True, blank=True)
+    image = models.ImageField(upload_to='portfolio/', null=True, blank=True)
     imgdesc = models.CharField(max_length=300)
 
     def __str__(self):
