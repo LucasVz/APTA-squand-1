@@ -85,6 +85,7 @@ header{
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 21px;
+	position: relative;
 }
 
 .row{
@@ -123,8 +124,10 @@ header{
 }
 
 .Escritorio{
+	padding-top: 2%;
 	position: relative;
 	width: 80%;
+	height: auto;
 	border-radius: 3px;
 	margin-left: 25%;
 }
@@ -207,11 +210,13 @@ header{
 .slick{
 	width: 80%;
 	height: 20%;
+	max-height: 210px;
 	margin-left: 10%;
 }
 
 .slick a img{
-	height: 100%;
+	width: 70%;
+	height: auto;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -244,15 +249,19 @@ header{
 
 
 .icon-1{
-	height: 11%;
+	width: 12%;
+	height: auto;
 	float: left;
+	min-width: 85px;
 }
 
 .icon-2{
-	height: 8%;
+	width: 12%;
+	height:auto;
 	float: left;
 	padding-right: 14px;
 	padding-left: 15px;
+	min-width: 85px;
 
 }
 
@@ -262,9 +271,11 @@ header{
 	width: 85%;
 	padding-top:1.5%;
 	padding-bottom:4.5%;
+	height: auto;
 }
 
 form{
+	height: auto;
 	width: 80%;
 	margin-right: auto;
 	margin-left: auto;
@@ -323,13 +334,21 @@ form label{
 
 .social-icon {
 	padding-left: 31.5%;
+	padding-bottom: 3%;
 }
 
 .social-icon img{
-	width: 150px;
+	width: 15%;
+	height: auto;
 	padding-left: 5%;
 	padding-right: 5%;
 
+}
+
+iframe{
+	width:85%;
+	height:74%;
+	max-height: 580px;
 }
 /*Fim Contatos*/
 
@@ -397,8 +416,8 @@ form label{
 }
 
 .img-serviços{
-	width: auto;
-	height: 25%;
+	width: 70.5%;
+	height: auto;
 	padding-left: 40%;
 	position: relative;
 }
@@ -456,7 +475,7 @@ form label{
 }
 
 .popup-2{
-	position: absolute;
+	position:absolute;
 	top: 440%;
 	bottom: 0;
 	left: 9%;
@@ -565,7 +584,8 @@ form label{
 
 .carrossel{
 	height: 45%;
-	width:100%;
+	width:auto;
+	max-height: 350px;
 }
 
 .portfolio .container-fluid{
@@ -624,4 +644,20 @@ form label{
   content: ">";
   color:#FF9933;
   font-size: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .popup-1 {
+    position: absolute;
+	top: 270%;
+	bottom: 0;
+	left: 9%;
+	margin:auto;
+	width: 40%;
+	height: 80%;
+	background: #373737;
+	display: none;
+	padding-left: 2%;
+	padding-top: 2%;
+  }
 }
