@@ -10,7 +10,7 @@ def website(request):
     context_dict['data'] = QuemSomos.objects.last()
     context_dict['gente'] = Clientes.objects.all()
     context_dict['stuff'] = Portfolio.objects.all()
-    context_dict['opcoes'] = Servicos.objects.all()
+    context_dict['opcoes'] = Servicos.objects.last()
     context_dict['form'] = ContactHelp()
 
     if request.method == 'POST':

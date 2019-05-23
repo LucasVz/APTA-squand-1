@@ -85,59 +85,58 @@
     <div class="container-fluid ">
       <div class= "row ">
         <div class= "col-sm-12 ">
-          <div class="text-serviços">
+          <ul class="text-serviços">
               <h1>SERVIÇOS</h1>
-              {% for Servicos in opcoes %}
-          </div>
+          </ul>
         </div>
         <div class= "col-sm-6 ">
-          {% if Servicos.imagem1 %}
-          <img src="{{ Servicos.imagem1 }}" class= "img-serviços">
+          {% if opcoes.imagem1 %}
+          <img src="{{ opcoes.imagem1 }}" class= "img-serviços">
           {% else %}
           <img src="{% static 'img/Serviços 1.png' %}" class= "img-serviços">
           {% endif %}
-          <div class="text-serviços">
-              <h2>{{ Servicos.titulo1 }}</h2>
-              <p>{{ Servicos.breveinfo1 }}</p>
-          </div>
+          <ul class="text-serviços">
+              <h2>{{ opcoes.titulo1 }}</h2>
+              <p>{{ opcoes.breveinfo1 }}</p>
+          </ul>
           <div class="saiba-m">
             <a href="javascript: abrir1();"><button type="button" class="btn btn-primary btn-lg">SAIBA MAIS</button></a>
           </div>
-          {% if Servicos.imagem2 %}
-          <img src="{{ Servicos.imagem2 }}" class= "img-serviços">
+          {% if opcoes.imagem2 %}
+          <img src="{{ opcoes.imagem2 }}" class= "img-serviços">
           {% else %}
           <img src="{% static 'img/Serviços 2.png' %}" class= "img-serviços">
           {% endif %}
-          <div class="text-serviços-2">
-            <h2>{{ Servicos.titulo2 }}</h2>
-            <p>{{ Servicos.breveinfo2 }}</p>
-          </div>
+          <ul class="text-serviços-2">
+            <h2>{{ opcoes.titulo2 }}</h2>
+            <p>{{ opcoes.breveinfo2 }}</p>
+          </ul>
           <div class="saiba-m">
             <a href="javascript: abrir2();"><button type="button" class="btn btn-primary btn-lg">SAIBA MAIS</button></a>
           </div>
         </div>
         <div class= "col-sm-6 ">
-          {% if Servicos.imagem3 %}
-          <img src="{{ Servicos.imagem3 }}" class= "img-serviços">
+          {% if opcoes.imagem3 %}
+          <img src="{{ opcoes.imagem3 }}" class= "img-serviços">
           {% else %}
           <img src="{% static 'img/Serviços 3.png' %}" class= "img-serviços">
           {% endif %}
-          <div class="text-serviços-2">
-              <h2>{{ Servicos.titulo3 }}</h2>
-              <p>{{ Servicos.breveinfo3 }}</p>
-          </div>
+          <ul class="text-serviços-2">
+              <h2>{{ opcoes.titulo3 }}</h2>
+              <p>{{ opcoes.breveinfo3 }}</p>
+          </ul>
           <div class="saiba-m">
             <a href="javascript: abrir3();"><button type="button" class="btn btn-primary btn-lg">SAIBA MAIS</button></a>
           </div>
-          {% if Servicos.imagem4 %}
-          <img src="{{ Servicos.imagem4 }}" class= "img-serviços">
+          {% if opcoes.imagem4 %}
+          <img src="{{ opcoes.imagem4 }}" class= "img-serviços">
           {% else %}
           <img src="{% static 'img/Serviços 4.png' %}" class= "img-serviços">
           {% endif %}
-          <div class="text-serviços">
-            <h2>{{ Servicos.titulo4 }}</h2>
-            <p>{{ Servicos.breveinfo4 }}</p>
-          </div>
+          <ul class="text-serviços">
+            <h2>{{ opcoes.titulo4 }}</h2>
+            <p>{{ opcoes.breveinfo4 }}</p>
+          </ul>
           <div class="saiba-m">
             <a href="javascript: abrir4();"><button type="button" class="btn btn-primary btn-lg">SAIBA MAIS</button></a>
           </div>
@@ -145,35 +144,33 @@
       </div>
     </div>
   </div>
-
   <div id="popup-1" class="popup-1">
     <a href="javascript: fechar();"><img src="{% static 'img/close.svg' %}" class="img-close"></a>
-    <div>
-      <p>{{ Servicos.info1 }}TEXTO 1Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
-    </div>
+    <ul>
+      <p>{{ opcoes.info1 }}</p>
+    </ul>
   </div>
 
   <div id="popup-2" class="popup-2">
     <a href="javascript: fechar();"><img src="{% static 'img/close.svg' %}" class="img-close"></a>
-    <div>
-      <p>{{ Servicos.info2 }}TEXTO 2 Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
-    </div>
+    <ul>
+      <p>{{ opcoes.info2 }}</p>
+    </ul>
   </div>
 
   <div id="popup-3" class="popup-3">
     <a href="javascript: fechar();"><img src="{% static 'img/close.svg' %}" class="img-close"></a>
-    <div>
-      <p>{{ Servicos.info3 }}TEXTO 3 Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
-    </div>
+    <ul>
+      <p>{{ opcoes.info3 }}</p>
+    </ul>
   </div>
 
   <div id="popup-4" class="popup-4">
     <a href="javascript: fechar();"><img src="{% static 'img/close.svg' %}" class="img-close"></a>
-    <div>
-      <p>{{ Servicos.info4 }}TEXTO 4 Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
-    </div>
+    <ul>
+      <p>{{ opcoes.info4 }}</p>
+    </ul>
   </div>
-      {% endfor %}
   <!-- Fim Serviços -->
 
   <!-- Perguntas -->
