@@ -28,18 +28,30 @@ class QuemSomos(models.Model):
         ordering = ['titulo']
 
 class Servicos(models.Model):
-    titulo = models.CharField(max_length=100, null=True)
-    imagem = models.ImageField(upload_to='servicos/', null=True, blank=True)
-    breveinfo = models.CharField(max_length=2000, null=True)
-    info = models.CharField(max_length=2000, null=True)
+    titulo1 = models.CharField(max_length=100, null=True)
+    imagem1 = models.ImageField(upload_to='servicos/', null=True, blank=True)
+    breveinfo1 = models.CharField(max_length=2000, null=True)
+    info1 = models.CharField(max_length=2000, null=True)
 
-    def __str__(self):
-        return self.titulo
+    titulo2 = models.CharField(max_length=100, null=True)
+    imagem2 = models.ImageField(upload_to='servicos/', null=True, blank=True)
+    breveinfo2 = models.CharField(max_length=2000, null=True)
+    info2 = models.CharField(max_length=2000, null=True)
+
+    titulo3 = models.CharField(max_length=100, null=True)
+    imagem3 = models.ImageField(upload_to='servicos/', null=True, blank=True)
+    breveinfo3 = models.CharField(max_length=2000, null=True)
+    info3 = models.CharField(max_length=2000, null=True)
+
+    titulo4 = models.CharField(max_length=100, null=True)
+    imagem4 = models.ImageField(upload_to='servicos/', null=True, blank=True)
+    breveinfo4 = models.CharField(max_length=2000, null=True)
+    info4 = models.CharField(max_length=2000, null=True)
 
     class Meta:
         verbose_name='Descricao'
         verbose_name_plural='Servicos'
-        ordering = ['titulo']
+        #ordering = ['titulo']
 
 class Portfolio(models.Model):
     titulo = models.CharField(max_length=100, null=True)

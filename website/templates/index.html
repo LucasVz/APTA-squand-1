@@ -47,7 +47,7 @@
           <div class= "col-sm-6 ">
             <ul class="text-Inicio">
                 <p>Soluções em Recursos Humano e Gestão de pessoas através do olhar da psicologia organizacional</p>
-              <button type="button" class="btn btn-primary btn-lg">SOLICITE UM DIAGNÓSTICO GRATUITO AQUI</button>
+              <a href="#Contatos"><button type="button" class="btn btn-primary btn-lg">SOLICITE UM DIAGNÓSTICO GRATUITO AQUI</button></a>
             </ul>
             <div class="mascara">
         </div>
@@ -85,42 +85,59 @@
     <div class="container-fluid ">
       <div class= "row ">
         <div class= "col-sm-12 ">
-          <ul class="text-serviços">
+          <div class="text-serviços">
               <h1>SERVIÇOS</h1>
-          </ul>
+              {% for Servicos in opcoes %}
+          </div>
         </div>
         <div class= "col-sm-6 ">
+          {% if Servicos.imagem1 %}
+          <img src="{{ Servicos.imagem1 }}" class= "img-serviços">
+          {% else %}
           <img src="{% static 'img/Serviços 1.png' %}" class= "img-serviços">
-          <ul class="text-serviços">
-              <h2>PROCESSO SELETIVO</h2>
-              <p>Após estabelecer com você qual o perfil do candidato desejado e as habilidades e competências necessárias para o cargo, realizaremos todo o processo de recrutamento e selecionaremos os candidatos mais adequados para o seu perfil para que ao final do processo você escolha o profissional que mais se encaixa com a sua empresa.</p>
-          </ul>
+          {% endif %}
+          <div class="text-serviços">
+              <h2>{{ Servicos.titulo1 }}</h2>
+              <p>{{ Servicos.breveinfo1 }}</p>
+          </div>
           <div class="saiba-m">
             <a href="javascript: abrir1();"><button type="button" class="btn btn-primary btn-lg">SAIBA MAIS</button></a>
           </div>
+          {% if Servicos.imagem2 %}
+          <img src="{{ Servicos.imagem2 }}" class= "img-serviços">
+          {% else %}
           <img src="{% static 'img/Serviços 2.png' %}" class= "img-serviços">
-          <ul class="text-serviços-2">
-            <h2>PESQUISA DE CLIMA ORGANIZACIONAL</h2>
-            <p>Através da Pesquisa de Clima Organizacional, medimos quantitativamente o relacionamento entre os funcionários e a empresa. Através dessa pesquisa, elaboramos uma análise, um diagnóstico e possíveis soluções para os problemas encontrados.</p>
-          </ul>
+          {% endif %}
+          <div class="text-serviços-2">
+            <h2>{{ Servicos.titulo2 }}</h2>
+            <p>{{ Servicos.breveinfo2 }}</p>
+          </div>
           <div class="saiba-m">
             <a href="javascript: abrir2();"><button type="button" class="btn btn-primary btn-lg">SAIBA MAIS</button></a>
           </div>
         </div>
         <div class= "col-sm-6 ">
+          {% if Servicos.imagem3 %}
+          <img src="{{ Servicos.imagem3 }}" class= "img-serviços">
+          {% else %}
           <img src="{% static 'img/Serviços 3.png' %}" class= "img-serviços">
-          <ul class="text-serviços-2">
-              <h2>DESCRIÇÃO E ANÁLISE DE CARGO</h2>
-              <p>O documento de Descrição e Análise de cargos contem uma descrição completa das atribuições, deveres e responsabilidades de um cargo, além de conter uma análise das habilidades, capacidades e conhecimentos requisitados para o pleno cumprimento de cada função.</p>
-          </ul>
+          {% endif %}
+          <div class="text-serviços-2">
+              <h2>{{ Servicos.titulo3 }}</h2>
+              <p>{{ Servicos.breveinfo3 }}</p>
+          </div>
           <div class="saiba-m">
             <a href="javascript: abrir3();"><button type="button" class="btn btn-primary btn-lg">SAIBA MAIS</button></a>
           </div>
+          {% if Servicos.imagem4 %}
+          <img src="{{ Servicos.imagem4 }}" class= "img-serviços">
+          {% else %}
           <img src="{% static 'img/Serviços 4.png' %}" class= "img-serviços">
-          <ul class="text-serviços">
-            <h2>TREINAMENTO</h2>
-            <p>Realizamos treinamentos buscando aprimorar ou desenvolver habilidades e conhecimentos considerados necessários para a plena realização das atividades de cada cargo na sua empresa, possibilitando uma melhora no desempenho dos seus colaboradores..</p>
-          </ul>
+          {% endif %}
+          <div class="text-serviços">
+            <h2>{{ Servicos.titulo4 }}</h2>
+            <p>{{ Servicos.breveinfo4 }}</p>
+          </div>
           <div class="saiba-m">
             <a href="javascript: abrir4();"><button type="button" class="btn btn-primary btn-lg">SAIBA MAIS</button></a>
           </div>
@@ -131,32 +148,32 @@
 
   <div id="popup-1" class="popup-1">
     <a href="javascript: fechar();"><img src="{% static 'img/close.svg' %}" class="img-close"></a>
-    <ul>
-      <p>TEXTO 1Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
-    </ul>
+    <div>
+      <p>{{ Servicos.info1 }}TEXTO 1Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
+    </div>
   </div>
 
   <div id="popup-2" class="popup-2">
     <a href="javascript: fechar();"><img src="{% static 'img/close.svg' %}" class="img-close"></a>
-    <ul >
-      <p>TEXTO 2 Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
-    </ul>
+    <div>
+      <p>{{ Servicos.info2 }}TEXTO 2 Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
+    </div>
   </div>
 
   <div id="popup-3" class="popup-3">
     <a href="javascript: fechar();"><img src="{% static 'img/close.svg' %}" class="img-close"></a>
-    <ul >
-      <p>TEXTO 3 Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
-    </ul>
+    <div>
+      <p>{{ Servicos.info3 }}TEXTO 3 Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
+    </div>
   </div>
 
   <div id="popup-4" class="popup-4">
     <a href="javascript: fechar();"><img src="{% static 'img/close.svg' %}" class="img-close"></a>
-    <ul >
-      <p>TEXTO 4 Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
-    </ul>
+    <div>
+      <p>{{ Servicos.info4 }}TEXTO 4 Sed pharetra ac odio ac iaculis. Suspendisse potenti. Ut porta vestibulum massa, et euismod magna egestas sed. Integer posuere urna odio, a tempor eros venenatis sit amet. Nullam eros est, congue eget nunc sed, dapibus eleifend orci. Cras ultricies dapibus purus ut dictum. Cras volutpat quis risus sed egestas. Aliquam vehicula lorem eget ligula aliquam, sit amet efficitur est consectetur. Pellentesque finibus lorem ut lacus volutpat, at ornare leo efficitur. Fusce placerat placerat dui, in posuere eros sagittis quis. Morbi eu dolor sit amet nulla placerat ullamcorper  </p>
+    </div>
   </div>
-
+      {% endfor %}
   <!-- Fim Serviços -->
 
   <!-- Perguntas -->
@@ -189,7 +206,6 @@
           </div>
         </div>
         {% endfor %}
-
       </div>
     </div>
   </div>
@@ -222,17 +238,17 @@
 
           <div >
             <img src="{% static 'img/Localização icone.png' %}" class= "icon-1" >
-            <li>Campus Universitário Central UFRN</li>
-            <li>Setor de Aulas II</li>
-            <li>Sala F5</li>
-            <li>Natal - RN</li>
-            <li>9078-970</li>
+            <p>Campus Universitário Central UFRN</p>
+            <p>Setor de Aulas II</p>
+            <p>Sala F5</p>
+            <p>Natal - RN</p>
+            <p>9078-970</p>
           </div>
 
           <div >
             <img src="{% static 'img/email icone.png' %}" class= "icon-2">
             <br>
-            <li>aptaconsultoriajr@gmail.com</li>
+            <p>aptaconsultoriajr@gmail.com</p>
           </div>
         </div>
 
@@ -260,9 +276,9 @@
             </div>
         </div>
         <div class= "col-sm-12 social-icon">
-          <a href="https://www.facebook.com/aptaconsultoriajr/"><img src="{% static 'img/face icone.png' %}"  height="80"></a>
-          <a href="https://www.instagram.com/aptaconsultoria/"><img src="{% static 'img/insta icone.png' %}"  height="95"></a>
-          <a href="https://aptaconsultoriajr.wixsite.com/site/sobre"><img src="{% static 'img/blog icone.png' %}"  height="110"></a>
+          <a href="https://www.facebook.com/aptaconsultoriajr/"><img src="{% static 'img/face icone.png' %}"></a>
+          <a href="https://www.instagram.com/aptaconsultoria/"><img src="{% static 'img/insta icone.png' %}"></a>
+          <a href="https://aptaconsultoriajr.wixsite.com/site/sobre"><img src="{% static 'img/blog icone.png' %}"></a>
         </div>
       </div>
     </div>

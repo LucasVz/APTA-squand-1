@@ -1,7 +1,6 @@
 from django import forms
 from django.core.mail import send_mail
 from django.conf import settings
-from django.core.validators import RegexValidator
 
 class ContactHelp(forms.Form):
     nome = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Seu nome', 'data-rule':'required', 'data-msg': 'Este campo e obrigatorio.'}))
