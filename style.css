@@ -290,14 +290,9 @@ form label{
 	font-size: 16px;
 	line-height: 19px;
 	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 2%;
 	margin-left:auto;
 	margin-right:auto;
-}
-
-.row .col-sm-6{
-	padding-left: 30px
 }
 
 .form-control{
@@ -453,7 +448,7 @@ iframe{
 	max-height: 600px;
 }
 
-.popup-1 ul{
+.popup-1 p{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
@@ -484,7 +479,7 @@ iframe{
 	max-height: 600px;
 }
 
-.popup-2 ul{
+.popup-2 p{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
@@ -515,7 +510,7 @@ iframe{
 	max-height: 600px;
 }
 
-.popup-3 ul{
+.popup-3 p{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
@@ -545,7 +540,7 @@ iframe{
 	max-height: 600px;
 }
 
-.popup-4 ul{
+.popup-4 p{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: normal;
@@ -580,6 +575,7 @@ iframe{
 	padding-bottom: 5%; 
 	padding-top: 2%;
 }
+
 
 .carrossel{
 	height: 45%;
